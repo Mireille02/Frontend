@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Poppins:wght@300&display=swap');
+
+/* Base Styles */
+/*Restaura los estilos por defecto y establece el padding y el margen 0*/
+*{
+    margin: 0 ;
+    padding: 0;
+}
+/*Utiliza la fuente Lato, sans-serif y asigna el color blanco al fondo*/
+body{
+    font-family: "Lato", sans-serif;
+}
+/*Has que todos los enlaces sean de color negro y sin decoración*/
+a{
+    color:black;
+    text-decoration: none;
+}
+/*A todos los h1 agregale el 30px, la altura del texto 600, margen de 10px 0 y el alto de la línea a 1.2*/
+h1{
+    font-size: 30px;
+    height: 600;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+/*A todos los h2 agregale el 25px, la altura del texto 300, margen de 10px 0 y el alto de la línea a 1.2*/
+h1{
+    font-size: 25px;
+    height: 300;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+/*Establece un tamaño de la fuente en los párrafps de 30px, un tamaño de fuente 20px y un margen de 10px 0*/
+p{
+    font-size: 20px;
+    margin: 10px 0;
+}
+/* Classes */

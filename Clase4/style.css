@@ -1,0 +1,72 @@
+nav ul{
+    display: flex; /* agrega una lista de manera horizontal*/
+    /*justify-content: space-between; les da espacio a cada elemento de la lista de manera horizontal*/
+    margin: 0 -10px;
+}
+
+nav li{
+    /*flex: auto;llena el espacio de los elementos*/
+    margin: 0 10px;/*crea un margen de un rango de 0 a 10px*/
+}
+
+.push-right{
+    margin-left: auto;/*al elemento margin-right lo manda hasta la derecha separándolos de los demás elementos*/
+}
+
+.box>*{/*crea un cuadro alrededor del texto de la primera lista*/
+    border: 2px solid rgb(96, 130, 168);
+    border-radius: 5px;
+    background-color: rgba(96, 139, 168, .2);
+    padding: 20px;
+}
+
+.wrap{/*lo defines*/
+    display: grid;/*para hacer cuadricula*/
+    grid-template-columns: repeat(3, 1fr);/*crea 3 columnas de una fracción*/
+    grid-gap: 10px; /*10px esel espacio entre cada cuadricula*/
+    grid-auto-rows: minmax(100px,auto); /*el 100px es el tamaño mínimo para que las cuadriculas se hagan pequella al momento de hacer la pantalla chica*/
+}
+
+*{box-sizing: border-box;}
+
+.wrap{/*les das estilos*/
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.wrap > div{/*lo aplicas a todos los divs*/
+    border: 2px solid rgb(red, green, blue);
+    border-radius: 5px; /*que las esquinas no sean cuadradas sino que sean un poco redondas*/
+    background-color: rgba(233, 171, 88, .5);
+    padding:#d9480f;
+}
+
+.uno{
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.dos {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+
+.tres{
+    grid-column: 1;
+    grid-row: 2/5;
+}
+
+.cuatro{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.cinco{
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.seis{
+    grid-column: 3;
+    grid-row: 4;
+}
