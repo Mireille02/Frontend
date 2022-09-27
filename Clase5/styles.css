@@ -64,7 +64,8 @@ li {
     margin: 0 10px;
 }
 
-footera:hover { /*para que cambie de color cuando el mouse pasa sobre*/
+footera:hover {
+    /*para que cambie de color cuando el mouse pasa sobre*/
     color: #9867c5;
     border-bottom: 2px solid #9867c5;
 }
@@ -278,4 +279,116 @@ text {
     border-radius: 50%;
     -webkit-border: 50%;
     width: 90px;
+}
+
+
+/*Tablets y tamaños menores*/
+@media(max-width: 768px) {
+
+    /*para darle el tamaño del dispositivo menor a 768px*/
+    .grid,
+    .grid-3 {
+        grid-template-columns: 1fr;
+        /*en el dispositivo todo el contenido se acomodó en una columna para verse en el dispositivo*/
+    }
+
+    .stats .flex {
+        flex-direction: column;
+    }
+
+    /*que el contenido este centrado*/
+    .stats {
+        text-align: center;
+    }
+
+    /*Para ajustar la imagen al dispositivo*/
+    .image {
+        width: 600px;
+        margin-left: 80px;
+    }
+
+    .stat {
+        width: 100%;
+        padding-right: 80px;
+    }
+
+    /*En relación a una columna por el dispositivo, aparece de lado izquierdo*/
+    .circle {
+        background-color: transparent;
+        border: 3px solid purple;
+        height: 90px;
+        position: relative;
+        top: -30px;
+        left: 270px;
+    }
+
+    .showcase {
+        height: auto;
+        text-align: center;
+    }
+}
+
+
+
+/*Tablets y tamaños menores*/
+@media(max-width: 500px) {
+
+    /*para darle el tamaño del dispositivo menor a 500px*/
+    .navbar {
+        height: 100px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbara:hover {
+        color: white;
+        border-bottom: 2px solid black;
+    }
+
+    .navbar ul {
+        background-color: #9867c5;
+        border-radius: 5px;
+        padding: 10px 0;
+    }
+
+    .little-info {
+        font-size: center;
+    }
+
+    .stats .flex {
+        flex-direction: column;
+    }
+
+    /*que el contenido este centrado*/
+    .stats {
+        text-align: center;
+    }
+
+    /*Para ajustar la imagen al dispositivo*/
+    .image {
+        width: 350px;
+        margin-left: 70px;
+    }
+
+    .stat {
+        margin-bottom: 40px;
+    }
+
+    /*En relación a una columna por el dispositivo, aparece de lado izquierdo*/
+    .circle {
+        background-color: transparent;
+        border: 3px solid purple;
+        height: 90px;
+        position: relative;
+        top: -30px;
+        left: 150px;
+        width: 90px;
+    }
+
+    .showcase {
+        height: auto;
+        text-align: center;
+    }
 }

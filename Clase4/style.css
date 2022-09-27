@@ -23,7 +23,7 @@ nav li{
 .wrap{/*lo defines*/
     display: grid;/*para hacer cuadricula*/
     grid-template-columns: repeat(3, 1fr);/*crea 3 columnas de una fracción*/
-    grid-gap: 10px; /*10px esel espacio entre cada cuadricula*/
+    grid-gap: 10px; /*10px es el espacio entre cada cuadricula*/
     grid-auto-rows: minmax(100px,auto); /*el 100px es el tamaño mínimo para que las cuadriculas se hagan pequella al momento de hacer la pantalla chica*/
 }
 
