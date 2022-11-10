@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,4 +14,81 @@
     <script src="./app.js"></script>
 </body>
 
+</html>-->
+
+<html>
+<head>
+<script>
+// ejecuta la función cuando carga la página web
+window.onload = function () {
+// crea un par de elementos HTML en la página
+var cabecera = document.createElement("h1");
+var textoCabecera = document.createTextNode("hola mundo");
+cabecera.appendChild(textoCabecera);
+document.body.appendChild(cabecera);
+//muestra la frase hola mundo
+}
+</script>
+</head>
+<body>
+    <h1>HOLA MUNDO</h1>
+
+    <!--imprime en la consola el link-->
+    <p><a href="http://cdctecmilenio.mx">Lernit</a></p>
+<script>
+let enlace = document.body.getElementsByTagName("a")[0];
+console.log(enlace.href);
+</script>
+
+<!--muestra el link de la imagen-->
+<p> Mi perro Rufo: </p>                         <!--0-->
+<p> <img id = "rufo" src = "img/rufo.png" alt = "mi perro Rufo"> </p> <!--1-->
+<script>
+let perro = document.getElementById ("rufo");
+console.log (perro.src);
+</script>
+
+<p>Uno</p>                                      <!--2-->
+<p>Dos</p>                                      <!--3-->
+<p>Tres</p>                                     <!--4-->
+<script>
+let parrafos = document.body.getElementsByTagName("p");
+document.body.insertBefore(parrafos[2], parrafos[0]);
+</script>
+
+<script>
+    function remplaceImagenes() {
+     let imagenes = document.body.getElementsByTagName("img");
+     for (let i = imagenes.length - 1; i >= 0; i--) {
+     let imagen = imagenes[i];
+     if (imagen.alt) {
+     let texto = document.createTextNode(imagen.alt);
+     imagen.parentNode.replaceChild(texto, imagen);
+    }
+     }
+    }
+    </script>
+
+<!--le da estilo al texto-->
+<blockquote id="cita">
+    Ningún libro puede terminarse jamás. Mientras trabajamos en ello aprendemos
+    lo suficiente para encontrarlo inmaduro en el momento en que nos alejamos de eso.
+   </blockquote>
+   <script>
+    function elt(type, ...hijos) {
+   let nodo = document.createElement(type);
+   for (let hijo of hijos) {
+    if (typeof hijo != "string") nodo.appendChild(hijo);
+    else nodo.appendChild(document.createTextNode(hijo));
+   }
+   return nodo;
+    }
+    document.getElementById("cita").appendChild(
+   elt("footer", "—",
+    elt("strong", "Karl Popper"),
+    ", prefacion de la segunda edicion de ",
+    elt("em", "La Sociedad abierta y sus enemigos"),
+    ", 1950"));
+   </script>
+</body>
 </html>
