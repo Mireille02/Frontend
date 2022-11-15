@@ -1,3 +1,4 @@
+//Ejercicio 8
 //Declara una constante y asígnale la clase document
 const d = document;
 
