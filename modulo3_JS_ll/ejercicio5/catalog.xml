@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PurchaseOrder PurchaseOrderOrderNumber = "99503" OrderDate = "2023-01-09">
+<!--Son Tags, en esta caso son de hoteles-->
+    <Address Type = "Shipping">
+    <Name>Hotel Mousal</Name>
+    <Street>Carretera a Barra de Navidad Km 7.5 Torre 6 Sur</Street>
+    <City>Puerto Vallarta</City>
+    <State>Jalisco</State>
+    <Zip>43338</Zip>
+    </Address>
+
+    <Address Type = "Billing">
+    <Name>Shraton Bugambilidas Resort Convetion</Name>
+    <Street>Boulevard Francisco Medina Ascencio 999</Street>
+    <City>Puerto Vallarta</City>
+    <State>Jalisco</State>
+    <Zip>43338</Zip>
+    </Address>
+
+    <Address Type = "Billing">
+    <Name>Fiesta Americana All Inclusive Spa</Name>
+    <Street>Boulevard Francisco Medina Ascencio 2179</Street>
+    <City>Puerto Vallarta</City>
+    <State>Jalisco</State>
+    <Zip>43338</Zip>
+    </Address>
+
+</PurchaseOrder>

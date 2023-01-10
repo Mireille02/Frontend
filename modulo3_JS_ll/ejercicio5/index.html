@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 5</title>
+</head>
+
+<body>
+    <div id="demostracion">
+        <h1>Objeto XMLHttpRequest - Información de un lugar turístico</h1>
+        <button type="button" onclick="CargarInformacion()"> Cambio el contenido </button>
+    </div>
+    
+    <script>
+        function CargarInformacion() {
+            //Crear una instancia del objeto XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function(){//identifica si hay un cambio de estado
+                if(this.readyState == 4 && this.status == 200){
+                document.getElementById("demostracion").innerHTML = this.responseText//une el formulario con el texto
+
+            }};
+
+            //Especificando las características de la solicitud
+            xhttp.open("GET", "info_turismo.txt", true);//parámetros
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>

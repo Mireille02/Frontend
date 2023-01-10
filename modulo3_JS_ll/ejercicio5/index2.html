@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table, th, td{
+            border: 1px solid black; 
+            border-collapse:collapse;
+        
+    } th, td{
+
+        padding: 5 px;  
+    }
+
+    </style>
+    <body>
+        <h1> Objeto XMLHttpRequest- Información de hoteles</h1>
+        <h2>Peticion de datos en XML</h2>
+        <button type="button" onclick="CargarInformacion()"> Obtener información de hoteles</button>
+        <br></br>
+        <table id="demo"></table>
+
+<script>
+    function CargarInformacion(){
+        // Crear una instancia del objeto XMLHttpRequest
+       const xhttp= new XMLHttpRequest(); 
+
+       xhttp.onload=function(){
+        myFunction(this); 
+       }
+
+        //Especificando las caracteristica de la solicitud 
+        xhttp.open("GET", "catalog.xml"); 
+        xhttp.send(); 
+    }
+
+    function myFunction(xml){
+        const xmlDoc= xml.responseXML; 
+        const x=xmlDoc.getElementsByTagName("Address"); 
+        let table= "<tr><th>Nombre</th><th>Calle</th><th>Ciudad</th><th>Estado</th></tr>"
+        for (let i = 0; i <x.length; i++) { 
+        table += "<tr><td>" +
+        x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("Street")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        x[i].getElementsByTagName("City")[0].childNodes[0].nodeValue +
+        "</td><td>"+
+        x[i].getElementsByTagName("State")[0].childNodes[0].nodeValue +
+        "</td></tr>";
+ }
+ document.getElementById("demo").innerHTML = table;
+}
+
+
+</script>
+
+

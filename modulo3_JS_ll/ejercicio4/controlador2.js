@@ -102,15 +102,15 @@
         document.write("Calificación IMDB: " + calificacionIMDB + "<br/>");
     }
     
+    //Muestra las fichas técnicas de las películas
     function mostrarArregloPeliculas(peliculas) {
         for(i = 0; i < peliculas.length; i++){
-            mostrarFichaTecnica(peliculas[i].id, peliculas[i].titulo, peliculas[i].director, peliculas[i].anioEstreno, peliculas[i].paises, peliculas[i].generos, peliculas[i].calificacionIMDB);
+            mostrarFichaTecnica(peliculas[i].id, peliculas[i].titulo, peliculas[i].director, peliculas[i].anioEstreno, 
+                peliculas[i].paises, peliculas[i].generos, peliculas[i].calificacionIMDB);
         }
     }
 
-
-
-
+    
     let listaGenerosValidos = new Array("drama, terror");
 
     let paises = new Array("EUA", "Londres");//se hace un arreglo porque es más de un país
@@ -123,10 +123,10 @@
     //let generos = new Array();
 
     let p = new Pelicula('F001', "Titanic", 'James Cameron', 1994, paises, generos, "dd1234567");
-    let p2 = new Pelicula('F002', "Avatar", 'James Cameron', 2012, paises, generos, "dd1234567");
-    let p3 = new Pelicula('F0013', "Jurasic Park", 'Steven Spielberg', 1993, paises, generos, "dd1234567");
+    let p2 = new Pelicula('F002', "Avatar", 'James Cameron', 2012, paises2, generos2, "dd1234567");
+    let p3 = new Pelicula('F0013', "Jurasic Park", 'Steven Spielberg', 1993, paises3, generos3, "dd1234567");
 
-    let peliculas = new Array (p1, p2, p3);
+    let peliculas = new Array (p, p2, p3);
 
     //mostrarTitulo(p);
     //validarTitulo(p.titulo);
