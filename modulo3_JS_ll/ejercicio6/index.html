@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<title>JSON</title>
+
+<body>
+    <!--Ejemplo 1-->
+    <h1>JSON</h1>
+    <p>Revisa el resultado en consola</p>
+    <!--<script>//convertir cadenas JSON a objetos
+            const obj = JSON.parse('{"nombre": "Jose Luis", "edad": 33, "casado": false}'); //cadena JSON
+            console.log(obj.nombre);//es para ver el resultado en la consola
+            console.log(obj.edad);
+            console.log(obj.casado);
+        </script>-->
+
+    <!--Ejercicio 1-->
+    <script>//convertir cadenas JSON a objetos
+        const obj2 = JSON.parse('{"caracteristicas": "aire acondicionado y una maleta", "tarifa": 2842, "personas": 4, "kilometraje": "ilimitado", "transmision": "manual"}'); //cadena JSON
+        document.write(obj2.caracteristicas + "<br/>"); //es para ver el resultado en la página
+        document.write(obj2.tarifa + "<br/>");
+        document.write(obj2.personas + "<br/>");
+        document.write(obj2.kilometraje + "<br/>");
+        document.write(obj2.transmision + "<br/>");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<title>Consumo de API</title>
+
+<body>
+    <!--Ejemplo 3-->
+    <h1>API</h1>
+    <p>Revisa el resultado en consola después de ejecutar el botón</p>
+    <button type="button" onclick="CargarDatosUsuarios()">Consulta la información</button>
+
+    <!--<script>
+        //solicitud fetch para la url donde estan expuesto los datos de los usuarios y traerlos a la consola
+        function CargarDatosUsuarios (){
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json())
+            .then(posts => console.log(posts))
+        }
+    </script>-->
+
+    <!--Ejercicio 3-->
+    <script>//convertir cadenas JSON a objetos
+        function CargarDatosUsuarios() {
+            fetch('https://jsonplaceholder.typicode.com/comments')
+                .then(res => res.json())
+                .then(posts => document.write(posts))
+        }
+    </script>
+
+    <script>//convertir cadenas JSON a objetos
+        function CargarDatosUsuarios() {
+            fetch('https://jsonplaceholder.typicode.com/comments')
+            .then(res => res.json())
+            .then(postId => document.write(postId))
+            .then(id => document.write(id))
+            .then(name => document.write(name))
+            .then(email => document.write(email))
+            .then(body => document.write(body))
+            /*document.write(fetch.postId + "<br/>"); //es para ver el resultado en la página
+            document.write(fetch.id + "<br/>");
+            document.write(fetch.name + "<br/>");
+            document.write(fetch.email + "<br/>");
+            document.write(fetch.body + "<br/>");*/
+        }
+
+    </script>
+
+</body>
+
+</html>
