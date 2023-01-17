@@ -1,0 +1,25 @@
+{
+  "name": "tecmilenio-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -o index-compiled.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mireille02/Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mireille02/Frontend/issues"
+  },
+  "homepage": "https://github.com/Mireille02/Frontend#readme",
+  "dependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<form class="form-inline" method="POST">
+    <h1>Información de Hoteles</h1>
+    <label>Hotel</label>
+    <input type="text" id="hotel" placeholder="Hotel" class="form-control">
+    <button type="button" onclick="mostrarHoteles();">Mostrar dirección del Hotel</button>
+    <script>
+        function mostrarHoteles() {
+            nombre = document.getElementById("hotel").value;
+            let = direccion = "";
+            if (nombre == "Sheraton")
+                direccion = "Boulevard Francisco Medina Ascencio 999";
+            if (nombre == "Mousai")
+                direccion = "Carretera a Barra de Navidad Km 7.5 Torre 6 Sur";
+            if (nombre == "Fiesta Americana")
+                direccion = "Boulevard Francisco Medina Ascencio 2179";
+            document.getElementById("direccion").value = direccion;
+
+        }
+    </script>
+    <p></p>
+    <input type="text" id="direccion" placeholder="Direccion" class="form-control" size="100">
+    <button type="button" onclick="mostrarInfoHotel();">Mostrar información del Hotel</button>
+    <script>
+        function mostrarInfoHotel() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("infoHotel").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "info-hotel.txt", true);
+            xhttp.send();
+        }
+    </script>
+    <div id="infoHotel"></div>
+</form>
