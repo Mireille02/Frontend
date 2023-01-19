@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 8</title>
+</head>
+
+<body>
+    <div>
+        <form class="form-inline" method="POST">
+            <label>Nombre</label>
+            <input type="text" id="nombre" placeholder="Nombre" class="form-control">
+            <label>Apellido Paterno</label>
+            <input type="text" id="apellidoP" placeholder="Apellido Paterno" class="form-control">
+            <label>Apellido Materno</label>
+            <input type="text" id="apellidoM" placeholder="Apellido Materno" class="form-control">
+            <label>Edad</label>
+            <input type="text" id="edad" placeholder="Edad" class="form-control">
+            <label>Domicilio</label>
+            <input type="text" id="domicilio" placeholder="Domicilio" class="form-control">
+            <button type="button" onclick="validarCampos();">Validar Datos</button>
+
+            <script>
+                function validarCampos() {
+                    nombre = document.getElementById("nombre").value;
+                    apellidoPaterno = document.getElementById("apellidoP").value;
+                    apellidoMaterno = document.getElementById("apellidoM").value;
+                    edad = document.getElementById("edad").value;
+                    domicilio = document.getElementById("domicilio").value;
+
+                    validarCampoTexto(nombre, "NOMBRE", 20);
+                    validarCampoTexto(apellidoPaterno, "APELLIDO PATERNO", 20);
+                    validarCampoTexto(apellidoMaterno, "APELLIDO MATERNO", 20);
+                    validarCampoNumero(edad, "EDAD");
+                    validarCampoTexto(domicilio, "DOMICILIO", 40);
+                }   
+
+                function validarCampoTexto(cadena, texto, noCaracteres) {
+                    if (cadena == "") {
+                        alert("El campo " + texto + " es obligatorio")
+                    }
+                    else {
+                        if (isNaN(cadena) == false) {
+                            alert("El campo " + texto + " tiene números")
+                        }
+                        else {
+                            if (cadena.lenght > 20)
+                                alert("El campo " + texto + " tiene longitud mayor a " + noCaracteres)
+                        }
+                    }
+                }
+
+                function validarCampoNumero(cadena, texto) {
+                    if (cadena == "") {
+                        alert("La edad " + texto + "se encuentra vacía")
+                    }
+                    else {
+                        if (isNaN(cadena) == true) {
+                            alert("La edad " + texto + "son puros números");
+                        }
+                    }
+                }
+
+            </script>
+        </form>
+    </div>
+</body>
+
+</html>
