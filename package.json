@@ -24,6 +24,8 @@
   "homepage": "https://github.com/Mireille02/Frontend#readme",
   "dependencies": {
     "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12"
+    "@babel/core": "^7.20.12",
+    "node-sass": "^8.0.0",
+    "sass": "^1.58.0"
   }
 }
