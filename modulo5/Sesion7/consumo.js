@@ -10,4 +10,4 @@ fetch(API_ENDPOINT)
     longitud = datosUbicacion.longitude;
     
   console.log(`Tus coordenadas son ${latitud},${longitud}`);
-});git
+});
