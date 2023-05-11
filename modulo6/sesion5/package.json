@@ -24,6 +24,7 @@
   "dependencies": {
     "@babel/cli": "^7.20.7",
     "@babel/core": "^7.20.12",
+    "mongoose": "^7.1.1",
     "mysql": "^2.18.1",
     "node-sass": "^8.0.0",
     "sass": "^1.58.0"
